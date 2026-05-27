@@ -5,6 +5,11 @@
   --color-indigo-600: #4F46E5;
   --color-indigo-700: #4338CA;
 
+  --color-emerald-600: #059669;
+  --color-emerald-700: #047857;
+  --color-rose-600: #E11D48;
+  --color-rose-700: #BE123C;
+
   --color-neutral-200: #E3E1EA;
   --color-neutral-700: #3D394C;
 
@@ -49,8 +54,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 12px;
-  background: var(--color-surface);
+  padding: 12px 14px;
   border-bottom: 1px solid var(--color-border);
   flex-shrink: 0;
 }
@@ -91,9 +95,9 @@ body {
   font-size: 12px;
   text-align: center;
   color: #fff;
-  background: #059669;
-  border-radius: 6px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  background: var(--color-emerald-700);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(24, 24, 27, 0.18);
   z-index: 100;
   animation: slideUp 0.3s ease;
 }
@@ -110,7 +114,7 @@ body {
 }
 
 .status.err {
-  background: #DC2626;
+  background: var(--color-rose-600);
   color: #fff;
 }
 
@@ -119,8 +123,7 @@ body {
 }
 
 .filter-section {
-  padding: 10px 12px;
-  background: var(--color-surface);
+  padding: 10px 14px;
   border-bottom: 1px solid var(--color-border);
   display: flex;
   align-items: center;
@@ -137,7 +140,11 @@ body {
 .results {
   flex: 1 1 auto;
   overflow-y: auto;
-  padding: 4px 6px 8px;
+  padding: 8px 10px;
+  background: var(--color-bg);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
   scrollbar-width: thin;
   scrollbar-color: var(--color-border-strong) transparent;
 }
@@ -155,10 +162,11 @@ body {
   align-items: flex-start;
   gap: 10px;
   padding: 10px 12px;
-  border-radius: 7px;
+  border-radius: 8px;
   cursor: pointer;
-  border: 1px solid transparent;
-  transition: background 0.15s;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  transition: background 0.15s, border-color 0.15s;
   line-height: 1.4;
 }
 
@@ -202,9 +210,6 @@ body {
 .result-client {
   color: var(--color-brand);
   font-weight: 600;
-}
-
-.result-client {
   text-decoration: none;
   cursor: pointer;
   transition: color 0.15s;
@@ -229,8 +234,7 @@ body {
 }
 
 .copy-section {
-  padding: 10px 12px;
-  background: var(--color-surface);
+  padding: 10px 14px;
   border-top: 1px solid var(--color-border);
   display: flex;
   gap: 8px;
@@ -244,8 +248,8 @@ body {
 .btn {
   padding: 7px 12px;
   border: 1px solid var(--color-border-strong);
-  border-radius: 7px;
-  font-size: 12px;
+  border-radius: 8px;
+  font-size: 12.5px;
   font-weight: 500;
   cursor: pointer;
   font-family: inherit;
@@ -372,10 +376,10 @@ body {
 
 .settings-row input,
 .settings-row select {
-  padding: 7px 10px;
+  padding: 8px 11px;
   border: 1px solid var(--color-border-strong);
-  border-radius: 7px;
-  font-size: 12.5px;
+  border-radius: 8px;
+  font-size: 13px;
   font-family: inherit;
   background: var(--color-surface);
   color: var(--color-text);
@@ -412,10 +416,10 @@ body {
 
 .exclude-clients-input-wrapper input {
   width: 100%;
-  padding: 7px 10px;
+  padding: 8px 11px;
   border: 1px solid var(--color-border-strong);
-  border-radius: 7px;
-  font-size: 12.5px;
+  border-radius: 8px;
+  font-size: 13px;
   font-family: inherit;
   background: var(--color-surface);
   color: var(--color-text);
@@ -434,11 +438,11 @@ body {
   right: 0;
   background: var(--color-surface);
   border: 1px solid var(--color-border-strong);
-  border-radius: 0 0 7px 7px;
+  border-radius: 0 0 8px 8px;
   max-height: 150px;
   overflow-y: auto;
   z-index: 10;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(24, 24, 27, 0.12);
 }
 
 .exclude-clients-dropdown[hidden] {
@@ -500,7 +504,7 @@ body {
   padding: 4px 8px;
   background: var(--color-surface-hover);
   border: 1px solid var(--color-border);
-  border-radius: 5px;
+  border-radius: 6px;
   font-size: 11px;
   color: var(--color-text-faint);
 }
@@ -515,8 +519,8 @@ body {
 
 .settings-actions button {
   padding: 7px 14px;
-  border-radius: 7px;
-  font-size: 12px;
+  border-radius: 8px;
+  font-size: 12.5px;
   font-weight: 500;
   cursor: pointer;
   border: 1px solid var(--color-border-strong);
